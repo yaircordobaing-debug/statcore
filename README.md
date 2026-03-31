@@ -1,8 +1,9 @@
 # StatCore: Plataforma de Análisis Estadístico Avanzado 📊
 
-[![CI](https://github.com/usuario/statcore/actions/workflows/ci.yml/badge.svg)](https://github.com/usuario/statcore/actions)
-[![Deploy to GitHub Pages](https://github.com/usuario/statcore/actions/workflows/deploy.yml/badge.svg)](https://github.com/usuario/statcore/actions)
+[![CI](https://github.com/yaircordobaing-debug/statcore/actions/workflows/ci.yml/badge.svg)](https://github.com/yaircordobaing-debug/statcore/actions)
+[![Deploy to GitHub Pages](https://github.com/yaircordobaing-debug/statcore/actions/workflows/deploy.yml/badge.svg)](https://github.com/yaircordobaing-debug/statcore/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-brightgreen)](https://yaircordobaing-debug.github.io/statcore/)
 
 > **Transformando datos crudos de Excel en decisiones estratégicas al instante.**
 
@@ -57,7 +58,7 @@ Para ejecutar StatCore en tu entorno de desarrollo, sigue los siguientes pasos:
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/statcore.git
+   git clone https://github.com/yaircordobaing-debug/statcore.git
    cd statcore
    ```
 
@@ -80,10 +81,9 @@ Para ejecutar StatCore en tu entorno de desarrollo, sigue los siguientes pasos:
 
 ## 🎨 Demo Visual
 
-*(Agrega aquí un GIF de 10-15 segundos demostrando el flujo: Subir archivo -> Seleccionar Columna -> Ver Resultados)*
+> **[🌐 Ver Demo en Vivo](https://yaircordobaing-debug.github.io/statcore/)**
 
-> **Ejemplo de Screenshot:**
-> ![StatCore Dashboard](./docs/assets/demo-placeholder.png)
+*(Agrega aquí un GIF de 10-15 segundos demostrando el flujo: Subir archivo → Seleccionar Columna → Ver Resultados)*
 
 ---
 
