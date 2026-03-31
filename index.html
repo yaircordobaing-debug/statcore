@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StatCore | Análisis Estadístico Avanzado</title>
+    <!-- Modern Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-background"></div>
+    
+    <div class="container">
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <!-- StatCore Icon SVG -->
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    <h1>StatCore</h1>
+                </div>
+                <p class="subtitle">Plataforma premium para análisis de datos estadísticos desde archivos Excel.</p>
+                <div class="authors">
+                    <span class="badge">Desarrollado por: Yair Cordoba, Jary Preston</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <!-- Upload Section -->
+            <section class="card upload-card glass-panel">
+                <h2>Cargar Conjunto de Datos</h2>
+                <p>Sube tu archivo .xls o .xlsx para comenzar el análisis.</p>
+                <form id="uploadForm" enctype="multipart/form-data" class="upload-form">
+                    <div class="file-input-wrapper">
+                        <input type="file" id="excelFile" name="file" accept=".xls,.xlsx" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        Subir Archivo
+                    </button>
+                </form>
+            </section>
+
+            <!-- Configuration Section (Hidden initially) -->
+            <section id="analysisSection" class="card config-card glass-panel hidden fade-in">
+                <h2>Configuración del Análisis</h2>
+                <div class="config-controls">
+                    <div class="input-group">
+                        <label for="columnSelect">Columna a analizar:</label>
+                        <select id="columnSelect" class="custom-select"></select>
+                    </div>
+                    <button id="calculateButton" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        Calcular Estadísticas
+                    </button>
+                </div>
+                <div class="alert alert-info">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    Nota: El software puede tener errores de aproximación mínimos. Valide los resultados críticos.
+                </div>
+            </section>
+
+            <!-- Visualization Section (Hidden initially) -->
+            <div id="visualizationSection" class="visualization-grid hidden fade-in">
+                <!-- Statistics Results -->
+                <section class="card stats-panel glass-panel">
+                    <h2>Métricas Estadísticas</h2>
+                    <div id="results" class="results-container"></div>
+                </section>
+
+                <!-- Frequency Table -->
+                <section class="card table-panel glass-panel">
+                    <h2>Tabla de Frecuencias Agrupadas</h2>
+                    <div class="table-responsive" id="frequencyTable"></div>
+                </section>
+
+                <!-- Charts -->
+                <section class="card chart-panel glass-panel chart-full">
+                    <h2>Gráficas de Análisis</h2>
+                    <div class="charts-container">
+                        <div class="chart-wrapper">
+                            <h3>Frecuencia Absoluta</h3>
+                            <canvas id="barChart"></canvas>
+                        </div>
+                        <div class="chart-wrapper">
+                            <h3>Marca de Clase x fi</h3>
+                            <canvas id="barChartFi"></canvas>
+                        </div>
+                        <div class="chart-wrapper">
+                            <h3>Distribución</h3>
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
